@@ -43,6 +43,7 @@
             this.txtTBKy2 = new System.Windows.Forms.TextBox();
             this.txtTBKy1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -133,6 +134,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label3);
@@ -146,7 +148,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(305, 67);
+            this.button1.Location = new System.Drawing.Point(354, 67);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(103, 33);
             this.button1.TabIndex = 3;
@@ -199,6 +201,16 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtvDiem_CellClick);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(245, 67);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 33);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Nhập điểm";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // UC_QuanLyDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -239,5 +251,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTBKy2;
         private System.Windows.Forms.TextBox txtTBKy1;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -37,6 +37,28 @@ namespace BUS
             return DataProvider.Instance.ExcuteQuery(query, new object[] { maLop, maMon });
         }
 
+        public List<Scorce> LayDanhSachDiem_List(string maLop, int maMon)
+        {
+            List<Scorce> list = new List<Scorce>();
+            DataTable dt = LayDanhSachDiem(maLop, maMon);
+            if(dt.Rows.Count > 0)
+            {
+                foreach(DataRow row in dt.Rows)
+                {
+                    Scorce scorce = new Scorce();
+                    scorce.MaHS = row[0].ToString();
+                    scorce.TenHS = row[1].ToString();
+                    scorce.TenMon = row[2].ToString();
+                    scorce.Diem_TB_ky1_cu = float.Parse(row[3].ToString());
+                    scorce.Diem_TB_ky2_cu = float.Parse(row[4].ToString());
+                    scorce.MaLop = row[5].ToString();
+                    scorce.MaMon = int.Parse(row[6].ToString());
+                    list.Add(scorce);
+                }
+            }
+            return list;
+        }
+
         public int SuaDiem(Diem diem)
         {
             string query = @"sb_UpdateScorce @mahs , @mamon , @diemky1 , @diemky2";

@@ -19,7 +19,7 @@ namespace DAL
             private set { instance = value; }
         }
 
-        private string stringConnection = @"Data Source=THUXINHGAI\SQLSERVER;Initial Catalog=QuanLy_Diem;Integrated Security=True";
+        private string stringConnection = @"Data Source=DESKTOP-0AL90BL\SQLEXPRESS;Initial Catalog=QuanLy_Diem;Integrated Security=True";
 
         public string GetValueFunction(string query)
         {
